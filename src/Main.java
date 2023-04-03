@@ -1,8 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        BonusMilesService service = new BonusMilesService();
-        int price = 10_000;
-        int miles = service.calculate(price); // должно получиться 500
-        System.out.println(miles);
+        BonusService service = new BonusService();
+
+        long amount = 1000_60;
+        boolean registered = true;
+
+        long bonus = service.calculate(amount, registered);
+        System.out.println (bonus);
+
     }
 }
